@@ -25,7 +25,7 @@ public class BaseTest {
 			 logger.info("conig.properties file loadded successfully");
 			 if(browser.equals("chrome")) {
 				 ChromeOptions options= new ChromeOptions();	
-				 options.addArguments("--headless");
+//				 options.addArguments("--headless");
 				 options.addArguments("--disable-gpu");
 				 options.addArguments("--disable-notifications");
 				 options.addArguments("--no-sandbox");
