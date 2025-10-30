@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean install'
+                bat 'mvn clean install -DskipTests'
             }
         }
 
@@ -24,12 +24,13 @@ pipeline {
             }
         }
 
-        stage('Reports') {
+        stage('Publish Extent Reports') {
             steps {
                 publishHTML(target: [
                     reportDir: 'test-output',
-                    reportFiles: '*.html',
-                    reportName: 'Extent Spark Report'
+                    reportFiles: 'ExtentReport.html',
+                    reportName: 'Extent HTML Report'
+                     keepAll: true
                 ])
             }
         }
@@ -93,7 +94,8 @@ pipeline {
                 <p>Please check the logs and take necessary actions.</p>
                 
                 <p><b>Extent Report (if available):</b> 
-				<a href="${env.BUILD_URL}HTML_20Extent_20Report/">Click Here</a></p>
+				<a href="${env.BUILD_URL}HTML_20Extent_20Report/">
+				Click Here</a></p>
 
                 <p>Regards,<br/>Automation Team</p>
                 </body>
