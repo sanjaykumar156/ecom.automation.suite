@@ -12,25 +12,21 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build & Test') {
             steps {
-                bat 'mvn clean install -DskipTests'
+                bat 'mvn clean test -DsuiteXmlFile=testng.xml'
             }
         }
 
-        stage('Test') {
-            steps {
-                bat 'mvn test'
-            }
-        }
-
-        stage('Publish Extent Reports') {
+        stage('Publish Extent Report') {
             steps {
                 publishHTML(target: [
-                    reportDir: 'Test-Reports',
-                    reportFiles: 'ExtentReport.html',
-                    reportName: 'Extent HTML Report',
-                     keepAll: true
+                    reportDir: 'test-output/SparkReport',
+                    reportFiles: 'Spark.html',
+                    reportName: 'Extent Report',
+                    keepAll: true,
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true
                 ])
             }
         }
@@ -38,68 +34,40 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: '**/src/main/java/utilities/ExtentReportManager/*.html', fingerprint: true
             junit 'target/surefire-reports/*.xml'
+            archiveArtifacts artifacts: 'test-output/SparkReport/*.html', fingerprint: true
         }
 
         success {
             emailext(
                 to: 'sanjaytanguturi37@gmail.com',
-                subject: "Build Success: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                subject: "✅ Build Success: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
-                <html>
-                <body>
-                <p>Hello Team,</p>
-                <p>The latest Jenkins build has completed successfully.</p>
-
-                <p><b>Project Name:</b> ${env.JOB_NAME}</p>
-                <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
-                <p><b>Build Status:</b> <span style='color: green;'><b>SUCCESS ✅</b></span></p>
-                <p><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-
-                <p><b>Last Commit:</b></p>
-                <p>${env.GIT_COMMIT}</p>
-                <p><b>Branch:</b> ${env.GIT_BRANCH}</p>
-
-                <p><b>Extent Report:</b> <a href="${env.BUILD_URL}HTML_20Extent_20Report/">
-                Click Here</a></p>
-
-                <p>Best Regards,<br/>Automation Team</p>
-                </body>
-                </html>
+                <html><body>
+                <p>✅ Jenkins build succeeded</p>
+                <p><b>Job:</b> ${env.JOB_NAME}</p>
+                <p><b>Build:</b> ${env.BUILD_NUMBER}</p>
+                <p><b>Extent Report:</b> 
+                <a href="${env.BUILD_URL}artifact/test-output/SparkReport/Spark.html">View Report</a></p>
+                </body></html>
                 """,
-                mimeType: 'text/html',
-                attachLog: true
+                mimeType: 'text/html'
             )
         }
 
         failure {
             emailext(
                 to: 'sanjaytanguturi37@gmail.com',
-                subject: "Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                subject: "❌ Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
-                <html>
-                <body>
-                <p>Hello Team,</p>
-                <p>The latest Jenkins build has <b style='color: red;'>FAILED ❌</b>.</p>
-
-                <p><b>Project Name:</b> ${env.JOB_NAME}</p>
-                <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
-                <p><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-
-                <p><b>Last Commit:</b></p>
-                <p>${env.GIT_COMMIT}</p>
-                <p><b>Branch:</b> ${env.GIT_BRANCH}</p>
-
-                <p>Please check the logs and take necessary actions.</p>
-                
-                <p><b>Extent Report (if available):</b> 
-				<a href="${env.BUILD_URL}HTML_20Extent_20Report/">
-				Click Here</a></p>
-
-                <p>Regards,<br/>Automation Team</p>
-                </body>
-                </html>
+                <html><body>
+                <p>❌ Jenkins build FAILED</p>
+                <p><b>Job:</b> ${env.JOB_NAME}</p>
+                <p><b>Build:</b> ${env.BUILD_NUMBER}</p>
+                <p><b>Extent Report (if generated):</b> 
+                <a href="${env.BUILD_URL}artifact/test-output/SparkReport/Spark.html">
+                View Report</a></p>
+                </body></html>
                 """,
                 mimeType: 'text/html',
                 attachLog: true
