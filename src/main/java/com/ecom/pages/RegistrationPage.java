@@ -26,6 +26,7 @@ public class RegistrationPage extends BasePage {
 	private By textcheck =By.xpath("//div[@class='result']");
 	
 	public void registerbutton() {
+		waitforelementclickable(registerbtn);
 		click(registerbtn);
 		
 	}

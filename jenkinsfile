@@ -27,8 +27,8 @@ pipeline {
         stage('Reports') {
             steps {
                 publishHTML(target: [
-                    reportDir: 'src/main/java/utilities/ExtentReportManager',
-                    reportFiles: 'Test-Reports.html',
+                    reportDir: 'test-output',
+                    reportFiles: '*.html',
                     reportName: 'Extent Spark Report'
                 ])
             }
