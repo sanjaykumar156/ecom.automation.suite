@@ -89,5 +89,9 @@ public class BasePage extends BaseTest {
 		logger.info("applied the border with colour- "+colour+" to element" +locator);
 		
 	}
+	public static String getRandomEmail() {
+	    String randomString = java.util.UUID.randomUUID().toString().replace("-", "").substring(0, 8);
+	    return randomString + "@gmail.com";
+	}
 
 }

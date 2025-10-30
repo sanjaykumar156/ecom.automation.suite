@@ -43,7 +43,7 @@ public class RegistrationPage extends BasePage {
 		applyBorder(lastname, "red");
 	}
 	public void email() {
-		sendkeys(email, ConfigReader.getproperty("email"));
+		sendkeys(email, getRandomEmail());
 	}
 	public void comapanyname() {
 		sendkeys(company, ConfigReader.getproperty("company"));
