@@ -1,53 +1,67 @@
 package com.ecom.baseclass;
 
 import java.time.Duration;
-
-import org.jspecify.annotations.Nullable;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.Platform;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.LockSupport;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
+
+import com.ecom.pages.LoggerManager;
 
 import utilities.ConfigReader;
 
 public class BaseTest {
-	protected static ThreadLocal<WebDriver> driver=new ThreadLocal<WebDriver> ();
-	public static String browserName;
-    public static String browserVersion;
-    public static String platforminfo;
-	 @Parameters({"browser"})
+	protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	protected static Logger logger= LoggerManager.getlogger(BaseTest.class);
 	@BeforeClass
-	public void setup(String browser) {
+	public void setup() {
 		 if(driver.get()==null) {
+			 String browser= ConfigReader.getproperty("browser");
+			 logger.info("conig.properties file loadded successfully");
 			 if(browser.equals("chrome")) {
-				 driver.set(new ChromeDriver());
+				 ChromeOptions options= new ChromeOptions();	
+				 options.addArguments("--headless");
+				 options.addArguments("--disable-gpu");
+				 options.addArguments("--disable-notifications");
+				 options.addArguments("--no-sandbox");
+				 options.addArguments("--disable-dev-shm-usage");
+				 driver.set(new ChromeDriver(options));
+				 logger.info(browser+" driver instance created");
 			 }else if(browser.equals("edge")) {
 				 driver.set(new EdgeDriver());
+				 logger.info(browser+" driver instance created");
 			 }else {
-				 throw new IllegalArgumentException("no browser matching" +browser);
+				 throw new IllegalArgumentException("no browser matching" +browser);  
 			 }
-			 Capabilities caps = ((RemoteWebDriver) driver.get()).getCapabilities();
-			 
 		 }
 
 		 if(driver.get()!=null) {
 			 driver.get().manage().window().maximize();
+			 logger.info("window maximized");
 			 driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			 driver.get().get(ConfigReader.getproperty("baseurl"));
-			 Capabilities caps = ((RemoteWebDriver) driver.get()).getCapabilities();
-		      browserName = caps.getBrowserName();
-		      browserVersion = caps.getBrowserVersion();
-		      platforminfo=caps.getPlatformName().toString();
+			 logger.info("opens the App URL");
 	}
+		
 	 }
+	public static WebDriver getdriver() {
+		return driver.get();
+	}
+
 	 @AfterClass
 	 public void teardown() {
 		 driver.get().quit();
+		 logger.info("webdriver closed successfully");
+	 }
+	 
+	 //satatic wait to pause
+	 public void staticwait() {
+		 LockSupport.parkNanos(TimeUnit.SECONDS.toNanos(5));
 	 }
 	
 }

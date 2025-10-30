@@ -9,7 +9,7 @@ public class ConfigReader {
 	static {
 	try {
 		
-		String path="C:\\Users\\sanjay royal\\eclipse-workspace\\ecom-automation-suite\\Resources\\config.properties";
+		String path="C:\\Users\\sanjay royal\\eclipse-workspace\\ecom-automation-suite\\src\\resources\\config.properties";
 		FileInputStream file= new FileInputStream(path);
 		prop = new Properties();
 		prop.load(file);

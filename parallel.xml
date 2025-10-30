@@ -4,9 +4,10 @@
 	<listeners>
 		<listener class-name="utilities.ExtentreportManager" />
 	</listeners>
-	<test thread-count="5" name="SmokeTest">
+	<test thread-count="3" name="parallelTest" parallel="classes">
 		<classes>
 			<class name="com.ecom.testcases.RegistrationTest" />
+			<class name="com.ecom.testcases.LoginTest" />
 		</classes>
 	</test> 
 </suite>

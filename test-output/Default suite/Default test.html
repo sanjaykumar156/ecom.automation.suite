@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Sep 17 21:13:39 IST 2025</td>
+<td>Started on:</td><td>Tue Oct 28 10:49:35 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (188 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (259 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,16 +77,17 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.ecom.testcases.RegistrationTest.setup()'><b>setup</b><br>Test class: com.ecom.testcases.RegistrationTest</td>
-<td><div><pre>org.testng.TestNGException: 
-Method setup requires 1 parameters but 2 were supplied in the BeforeClass annotation.
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:450)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+<td><div><pre>java.lang.ExceptionInInitializerError
+	at com.ecom.baseclass.BaseTest.setup(BaseTest.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
 	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at org.testng.TestRunner.privateRun(TestRunner.java:741)
 	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
@@ -102,17 +103,28 @@ Method setup requires 1 parameters but 2 were supplied in the BeforeClass annota
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace324169305", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace324169305'><pre>org.testng.TestNGException: 
-Method setup requires 1 parameters but 2 were supplied in the BeforeClass annotation.
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:450)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+Caused by: java.lang.RuntimeException: Failed to load config.properties file
+	at utilities.ConfigReader.&lt;clinit&gt;(ConfigReader.java:18)
+	... 25 more
+Caused by: java.io.FileNotFoundException: C:\Users\sanjay royal\eclipse-workspace\ecom-automation-suite\Resources\config.properties (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:106)
+	at utilities.ConfigReader.&lt;clinit&gt;(ConfigReader.java:13)
+	... 25 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1660223291", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1660223291'><pre>java.lang.ExceptionInInitializerError
+	at com.ecom.baseclass.BaseTest.setup(BaseTest.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
 	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at org.testng.TestRunner.privateRun(TestRunner.java:741)
 	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
@@ -128,9 +140,19 @@ Method setup requires 1 parameters but 2 were supplied in the BeforeClass annota
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.RuntimeException: Failed to load config.properties file
+	at utilities.ConfigReader.&lt;clinit&gt;(ConfigReader.java:18)
+	... 25 more
+Caused by: java.io.FileNotFoundException: C:\Users\sanjay royal\eclipse-workspace\ecom-automation-suite\Resources\config.properties (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:106)
+	at utilities.ConfigReader.&lt;clinit&gt;(ConfigReader.java:13)
+	... 25 more
 </pre></div></td>
-<td>-1758123819</td>
-<td>com.ecom.testcases.RegistrationTest@5524cca1</td></tr>
+<td>0</td>
+<td>com.ecom.testcases.RegistrationTest@395b56bb</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -144,7 +166,7 @@ Method setup requires 1 parameters but 2 were supplied in the BeforeClass annota
 <td title='com.ecom.testcases.RegistrationTest.teardown()'><b>teardown</b><br>Test class: com.ecom.testcases.RegistrationTest</td>
 <td></td>
 <td>0</td>
-<td>com.ecom.testcases.RegistrationTest@5524cca1</td></tr>
+<td>com.ecom.testcases.RegistrationTest@395b56bb</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -156,16 +178,17 @@ Method setup requires 1 parameters but 2 were supplied in the BeforeClass annota
 </tr>
 <tr>
 <td title='com.ecom.testcases.RegistrationTest.registrationtest()'><b>registrationtest</b><br>Test class: com.ecom.testcases.RegistrationTest</td>
-<td><div><pre>org.testng.TestNGException: 
-Method setup requires 1 parameters but 2 were supplied in the BeforeClass annotation.
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:450)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+<td><div><pre>java.lang.ExceptionInInitializerError
+	at com.ecom.baseclass.BaseTest.setup(BaseTest.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
 	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at org.testng.TestRunner.privateRun(TestRunner.java:741)
 	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
@@ -181,17 +204,28 @@ Method setup requires 1 parameters but 2 were supplied in the BeforeClass annota
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace418179060", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace418179060'><pre>org.testng.TestNGException: 
-Method setup requires 1 parameters but 2 were supplied in the BeforeClass annotation.
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:450)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+Caused by: java.lang.RuntimeException: Failed to load config.properties file
+	at utilities.ConfigReader.&lt;clinit&gt;(ConfigReader.java:18)
+	... 25 more
+Caused by: java.io.FileNotFoundException: C:\Users\sanjay royal\eclipse-workspace\ecom-automation-suite\Resources\config.properties (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:106)
+	at utilities.ConfigReader.&lt;clinit&gt;(ConfigReader.java:13)
+	... 25 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace251520863", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace251520863'><pre>java.lang.ExceptionInInitializerError
+	at com.ecom.baseclass.BaseTest.setup(BaseTest.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
 	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at org.testng.TestRunner.privateRun(TestRunner.java:741)
 	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
@@ -207,9 +241,19 @@ Method setup requires 1 parameters but 2 were supplied in the BeforeClass annota
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.RuntimeException: Failed to load config.properties file
+	at utilities.ConfigReader.&lt;clinit&gt;(ConfigReader.java:18)
+	... 25 more
+Caused by: java.io.FileNotFoundException: C:\Users\sanjay royal\eclipse-workspace\ecom-automation-suite\Resources\config.properties (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:106)
+	at utilities.ConfigReader.&lt;clinit&gt;(ConfigReader.java:13)
+	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>com.ecom.testcases.RegistrationTest@5524cca1</td></tr>
+<td>com.ecom.testcases.RegistrationTest@395b56bb</td></tr>
 </table><p>
 </body>
 </html>

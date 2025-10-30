@@ -1,18 +1,20 @@
 package com.ecom.testcases;
 
+import static org.testng.Assert.assertTrue;
+
 import org.testng.annotations.Test;
 
 import com.ecom.baseclass.BaseTest;
 import com.ecom.pages.RegistrationPage;
 
-import junit.framework.Assert;
+
 
 public class RegistrationTest extends BaseTest{
 	
 	@Test(groups= {"smoke"})
 	public void registrationtest() {
 		
-		RegistrationPage registration= new RegistrationPage(driver.get());
+		RegistrationPage registration= new RegistrationPage();
 		registration.registerbutton();
 		registration.genderbutton();
 		registration.firstname();
@@ -22,8 +24,9 @@ public class RegistrationTest extends BaseTest{
 		registration.password();
 		registration.cnfrmpassword();
 		registration.signupbtn();
-		Assert.assertTrue(registration.validatetext());
-		System.out.println("registration succesfull");
+		assertTrue(registration.validatetext());
+		logger.info("registration successfull");
+		staticwait();
 		
 		
 	}

@@ -16,12 +16,14 @@ import com.aventstack.extentreports.reporter.ExtentReporter;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.ecom.baseclass.BaseTest;
+import com.ecom.pages.LoggerManager;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class ExtentreportManager extends ScreenshotsUtils implements ITestListener {
-
+	protected static Logger logger= LoggerManager.getlogger(ExtentreportManager.class);
 	public ExtentSparkReporter sparkreporter;
 	public ExtentReports extent;
 	public ExtentTest test;
@@ -42,9 +44,9 @@ public class ExtentreportManager extends ScreenshotsUtils implements ITestListen
 		extent.setSystemInfo("java version", System.getProperty("java.version"));
 		extent.setSystemInfo("environment", "local");
 		extent.setSystemInfo("testername", System.getProperty("user.name"));
-		extent.setSystemInfo("browser",BaseTest.browserName);
-		extent.setSystemInfo("browserversion",BaseTest.browserVersion);
-		extent.setSystemInfo("platform",BaseTest.platforminfo);
+//		extent.setSystemInfo("browser",BaseTest.browserName);
+//		extent.setSystemInfo("browserversion",BaseTest.browserVersion);
+//		extent.setSystemInfo("platform",BaseTest.platforminfo);
 		
 	}
 	
@@ -72,8 +74,8 @@ public class ExtentreportManager extends ScreenshotsUtils implements ITestListen
 	}
 	
 	public void onFinish(ITestContext context) {
-		System.out.println("Flushing Extent Report...");
-		extent.flush();
+		logger.info("flushing extent report");
+		extent.flush(); 
 	}
 	
 }

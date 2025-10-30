@@ -4,10 +4,15 @@
   <listeners>
     <listener class-name="utilities.ExtentreportManager"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
-    <parameter name="os" value="windows"/>
-    <parameter name="browser" value="chrome"/>
+  <test thread-count="5" parallel="classes" name="parallelTest(failed)">
     <classes>
+      <class name="com.ecom.testcases.RegistrationTest">
+        <methods>
+          <include name="registrationtest"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ecom.testcases.RegistrationTest -->
       <class name="com.ecom.testcases.LoginTest">
         <methods>
           <include name="logintest"/>
@@ -16,5 +21,5 @@
         </methods>
       </class> <!-- com.ecom.testcases.LoginTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- parallelTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -4,13 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.ecom.baseclass.BasePage;
+import com.ecom.baseclass.BaseTest;
 
 import utilities.ConfigReader;
 
 public class RegistrationPage extends BasePage {
 
-	public RegistrationPage(WebDriver driver) {
-		super(driver);
+	public RegistrationPage() {
+		super(BaseTest.getdriver());
 	
 	}
 	private By registerbtn=By.xpath("//a[text()='Register']");
@@ -26,6 +27,7 @@ public class RegistrationPage extends BasePage {
 	
 	public void registerbutton() {
 		click(registerbtn);
+		
 	}
 	public void genderbutton() {
 		click(genderbtn);
@@ -35,6 +37,7 @@ public class RegistrationPage extends BasePage {
 	}
 	public void lastname() {
 		sendkeys(lastname, ConfigReader.getproperty("lastname"));
+		applyBorder(lastname, "red");
 	}
 	public void email() {
 		sendkeys(email, ConfigReader.getproperty("email"));

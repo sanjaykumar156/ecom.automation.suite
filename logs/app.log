@@ -1,0 +1,25 @@
+2025-10-28 11:18:37 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-10-28 11:18:41 [main] INFO  BaseTest - chrome driver instance created
+2025-10-28 11:18:41 [main] INFO  BaseTest - window maximized
+2025-10-28 11:18:43 [main] INFO  BaseTest - opens the App URL
+2025-10-28 11:18:44 [main] INFO  BasePage - applied the border with colour- red to elementBy.id: LastName
+2025-10-28 11:18:58 [main] INFO  BaseTest - webdriver closed successfully
+2025-10-28 11:18:58 [main] INFO  ExtentreportManager - flushing extent report
+2025-10-28 11:33:19 [TestNG-test-parallelTest-1] INFO  BaseTest - conig.properties file loadded successfully
+2025-10-28 11:33:25 [TestNG-test-parallelTest-1] INFO  BaseTest - chrome driver instance created
+2025-10-28 11:33:25 [TestNG-test-parallelTest-1] INFO  BaseTest - window maximized
+2025-10-28 11:33:27 [TestNG-test-parallelTest-1] INFO  BaseTest - opens the App URL
+2025-10-28 11:33:29 [TestNG-test-parallelTest-1] INFO  BasePage - applied the border with colour- red to elementBy.id: LastName
+2025-10-28 11:33:44 [TestNG-test-parallelTest-1] INFO  BaseTest - webdriver closed successfully
+2025-10-28 11:35:38 [TestNG-test-parallelTest-2] INFO  BaseTest - conig.properties file loadded successfully
+2025-10-28 11:35:38 [TestNG-test-parallelTest-1] INFO  BaseTest - conig.properties file loadded successfully
+2025-10-28 11:35:47 [TestNG-test-parallelTest-2] INFO  BaseTest - chrome driver instance created
+2025-10-28 11:35:47 [TestNG-test-parallelTest-1] INFO  BaseTest - chrome driver instance created
+2025-10-28 11:35:47 [TestNG-test-parallelTest-1] INFO  BaseTest - window maximized
+2025-10-28 11:35:47 [TestNG-test-parallelTest-2] INFO  BaseTest - window maximized
+2025-10-28 11:35:48 [TestNG-test-parallelTest-2] INFO  BaseTest - opens the App URL
+2025-10-28 11:35:49 [TestNG-test-parallelTest-1] INFO  BaseTest - opens the App URL
+2025-10-28 11:35:54 [TestNG-test-parallelTest-1] INFO  BasePage - applied the border with colour- red to elementBy.id: LastName
+2025-10-28 11:36:04 [TestNG-test-parallelTest-2] INFO  BaseTest - webdriver closed successfully
+2025-10-28 11:36:06 [TestNG-test-parallelTest-1] INFO  BaseTest - webdriver closed successfully
+2025-10-28 11:36:06 [main] INFO  ExtentreportManager - flushing extent report
