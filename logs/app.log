@@ -23,3 +23,9 @@
 2025-10-28 11:36:04 [TestNG-test-parallelTest-2] INFO  BaseTest - webdriver closed successfully
 2025-10-28 11:36:06 [TestNG-test-parallelTest-1] INFO  BaseTest - webdriver closed successfully
 2025-10-28 11:36:06 [main] INFO  ExtentreportManager - flushing extent report
+2025-10-30 10:57:32 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-10-30 10:57:44 [main] INFO  BaseTest - chrome driver instance created
+2025-10-30 10:57:44 [main] INFO  BaseTest - window maximized
+2025-10-30 10:57:47 [main] INFO  BaseTest - opens the App URL
+2025-10-30 10:57:59 [main] INFO  BaseTest - webdriver closed successfully
+2025-10-30 10:57:59 [main] INFO  ExtentreportManager - flushing extent report

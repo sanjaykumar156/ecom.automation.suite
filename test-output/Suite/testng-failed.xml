@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="utilities.ExtentreportManager"/>
   </listeners>
-  <test thread-count="5" parallel="classes" name="parallelTest(failed)">
+  <test thread-count="5" name="SmokeTest(failed)">
     <classes>
       <class name="com.ecom.testcases.RegistrationTest">
         <methods>
@@ -13,13 +13,6 @@
           <include name="setup"/>
         </methods>
       </class> <!-- com.ecom.testcases.RegistrationTest -->
-      <class name="com.ecom.testcases.LoginTest">
-        <methods>
-          <include name="logintest"/>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.ecom.testcases.LoginTest -->
     </classes>
-  </test> <!-- parallelTest(failed) -->
+  </test> <!-- SmokeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
