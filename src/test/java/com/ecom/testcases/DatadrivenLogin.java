@@ -6,23 +6,24 @@ import org.testng.annotations.Test;
 
 import com.ecom.baseclass.BaseTest;
 import com.ecom.pages.LoginPage;
+import com.ecom.pages.RegistrationPage;
 
-import utilities.ConfigReader;
+import utilities.DataDriven;
 
-
-public class LoginTest extends BaseTest{
+public class DatadrivenLogin extends BaseTest {
 	
 	
-	@Test(groups= {"smoke"})
-	public void logintest() {
+	@Test(dataProvider ="logindata", dataProviderClass=DataDriven.class)
+	public void DatadrivenLoginTest(String email, String Password) {
 		
 		LoginPage login = new LoginPage();
 		login.loginbutton();
-		login.emailtext(ConfigReader.getproperty("email"));
-		login.passwordtext(ConfigReader.getproperty("password"));
+		login.emailtext(email);
+		login.passwordtext(Password);
 		login.signinbutton();
 		assertTrue(login.homepagevalidation());
+	}
 		
 	}
 
-}
+

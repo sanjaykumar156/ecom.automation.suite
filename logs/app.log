@@ -44,3 +44,53 @@
 2025-10-30 12:44:40 [main] INFO  BasePage - applied the border with colour- red to elementBy.id: LastName
 2025-10-30 12:44:43 [main] INFO  RegistrationTest - registration successfull
 2025-10-30 12:44:52 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-20 17:57:41 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-20 17:58:10 [main] INFO  BaseTest - chrome driver instance created
+2025-11-20 17:58:10 [main] INFO  BaseTest - window maximized
+2025-11-20 17:58:13 [main] INFO  BaseTest - opens the App URL
+2025-11-20 17:58:16 [main] INFO  BasePage - applied the border with colour- red to elementBy.id: LastName
+2025-11-20 17:58:20 [main] INFO  RegistrationTest - registration successfull
+2025-11-20 17:58:26 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-20 18:10:09 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-20 18:10:13 [main] INFO  BaseTest - chrome driver instance created
+2025-11-20 18:10:13 [main] INFO  BaseTest - window maximized
+2025-11-20 18:10:15 [main] INFO  BaseTest - opens the App URL
+2025-11-20 18:10:29 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-20 18:13:20 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-20 18:13:22 [main] INFO  BaseTest - chrome driver instance created
+2025-11-20 18:13:23 [main] INFO  BaseTest - window maximized
+2025-11-20 18:13:25 [main] INFO  BaseTest - opens the App URL
+2025-11-20 18:13:40 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-20 18:13:40 [main] INFO  ExtentreportManager - flushing extent report
+2025-11-20 19:00:59 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-20 19:01:12 [main] INFO  BaseTest - chrome driver instance created
+2025-11-20 19:01:12 [main] INFO  BaseTest - window maximized
+2025-11-20 19:01:14 [main] INFO  BaseTest - opens the App URL
+2025-11-20 19:01:15 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-20 19:01:15 [main] INFO  ExtentreportManager - flushing extent report
+2025-11-20 19:07:51 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-20 19:07:56 [main] INFO  BaseTest - chrome driver instance created
+2025-11-20 19:07:56 [main] INFO  BaseTest - window maximized
+2025-11-20 19:07:59 [main] INFO  BaseTest - opens the App URL
+2025-11-20 19:08:01 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-20 19:08:01 [main] INFO  ExtentreportManager - flushing extent report
+2025-11-20 19:09:08 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-20 19:09:15 [main] INFO  BaseTest - chrome driver instance created
+2025-11-20 19:09:15 [main] INFO  BaseTest - window maximized
+2025-11-20 19:09:17 [main] INFO  BaseTest - opens the App URL
+2025-11-20 19:09:37 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-20 19:09:37 [main] INFO  ExtentreportManager - flushing extent report
+2025-11-20 19:11:06 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-20 19:11:12 [main] INFO  BaseTest - chrome driver instance created
+2025-11-20 19:11:12 [main] INFO  BaseTest - window maximized
+2025-11-20 19:11:14 [main] INFO  BaseTest - opens the App URL
+2025-11-20 19:11:19 [main] INFO  BasePage - applied the border with colour- red to elementBy.id: LastName
+2025-11-20 19:11:33 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-20 19:11:33 [main] INFO  ExtentreportManager - flushing extent report
+2025-11-20 19:12:50 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-20 19:12:54 [main] INFO  BaseTest - chrome driver instance created
+2025-11-20 19:12:54 [main] INFO  BaseTest - window maximized
+2025-11-20 19:12:55 [main] INFO  BaseTest - opens the App URL
+2025-11-20 19:13:01 [main] INFO  BasePage - applied the border with colour- red to elementBy.id: LastName
+2025-11-20 19:13:22 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-20 19:13:22 [main] INFO  ExtentreportManager - flushing extent report

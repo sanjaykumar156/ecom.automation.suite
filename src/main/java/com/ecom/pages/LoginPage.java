@@ -24,11 +24,11 @@ public class LoginPage extends BasePage{
 	public void loginbutton() {
 		click(Loginbtn);
 	}
-	public void emailtext() {
-		sendkeys(Emailtext,ConfigReader.getproperty("loginmail"));
+	public void emailtext(String email) {
+		sendkeys(Emailtext,email);
 	}
-	public void passwordtext() {
-		sendkeys(passwordtxt,ConfigReader.getproperty("loginpassword"));
+	public void passwordtext(String password) {
+		sendkeys(passwordtxt,password);
 	}
 	public void signinbutton() {
 		click(login);

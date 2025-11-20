@@ -9,10 +9,11 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.DataProvider;
 
-public class DataProvider {
+public class DataDriven {
 	
-	private static final String sheetname="Sheer1";
+	private static final String sheetname="Sheet1";
 	public static String celltype(Cell cell) {
 		if(cell==null) {
 			return "";
@@ -33,12 +34,18 @@ public class DataProvider {
 		}
 	}
 	
+	@DataProvider(name = "logindata")
 	public static Object[][] getsheetdata() throws IOException {
 		try {
 		String filepath="C:\\Users\\sanjay royal\\eclipse-workspace\\ecom-automation-suite\\src\\main\\java\\utilities\\nopecom.xlsx";
 		FileInputStream file= new FileInputStream(filepath);
 		XSSFWorkbook workbook=new XSSFWorkbook(file);
 		XSSFSheet sheet= workbook.getSheet(sheetname);
+		
+		if(sheet==null) {
+			workbook.close();
+			throw new IllegalArgumentException("sheet not found" + sheet +"not found");
+		}
 		
 		int rowcount=sheet.getPhysicalNumberOfRows();
 		int columncount=sheet.getRow(0).getPhysicalNumberOfCells();
