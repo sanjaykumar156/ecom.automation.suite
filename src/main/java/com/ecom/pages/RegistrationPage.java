@@ -25,11 +25,13 @@ public class RegistrationPage extends BasePage {
 	private By singnup =By.id("register-button");
 	private By textcheck =By.xpath("//div[@class='result']");
 	
+	
 	public void registerbutton() {
 		if(
 		isDisplayed(registerbtn)) {
 			waitforelementclickable(registerbtn);
 			click(registerbtn);
+			
 		}
 	}
 	public void genderbutton() {

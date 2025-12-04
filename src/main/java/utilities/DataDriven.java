@@ -37,7 +37,7 @@ public class DataDriven {
 	@DataProvider(name = "logindata")
 	public static Object[][] getsheetdata() throws IOException {
 		try {
-		String filepath="C:\\Users\\sanjay royal\\eclipse-workspace\\ecom-automation-suite\\src\\main\\java\\utilities\\nopecom.xlsx";
+		String filepath=ConfigReader.getproperty("Testdatapath");
 		FileInputStream file= new FileInputStream(filepath);
 		XSSFWorkbook workbook=new XSSFWorkbook(file);
 		XSSFSheet sheet= workbook.getSheet(sheetname);

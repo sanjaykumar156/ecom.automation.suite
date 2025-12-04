@@ -45,6 +45,8 @@ public class BaseTest {
 			 logger.info("window maximized");
 			 driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			 driver.get().get(ConfigReader.getproperty("baseurl"));
+			 driver.get().manage().deleteAllCookies();
+			 driver.get().navigate().refresh();
 			 logger.info("opens the App URL");
 	}
 		

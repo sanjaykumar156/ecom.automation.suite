@@ -30,10 +30,17 @@ public class BasePage extends BaseTest {
 	keys.clear();
 	keys.sendKeys(text);
 	}
-	public String gettext(By locator) {
-	String text=driver.findElement(locator).getText();
-	return text;
+	public String getText(By locator) {
+	    try {
+	        return driver.findElement(locator).getText();
+	        
+	    } catch (Exception e) {
+	        logger.error("Unable to fetch text from locator: " + locator);
+	        logger.error("Reason: " + e.getMessage());
+	        return null;
+	    }
 	}
+
 	public void hoveron(By locator) {
 		WebElement element=driver.findElement(locator);
 		action.moveToElement(element).build().perform();
@@ -92,6 +99,10 @@ public class BasePage extends BaseTest {
 	public static String getRandomEmail() {
 	    String randomString = java.util.UUID.randomUUID().toString().replace("-", "").substring(0, 8);
 	    return randomString + "@gmail.com";
+	}
+	
+	public static void sleep(long milles) throws InterruptedException {
+		Thread.sleep(milles);
 	}
 
 }

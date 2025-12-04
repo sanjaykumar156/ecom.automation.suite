@@ -94,3 +94,63 @@
 2025-11-20 19:13:01 [main] INFO  BasePage - applied the border with colour- red to elementBy.id: LastName
 2025-11-20 19:13:22 [main] INFO  BaseTest - webdriver closed successfully
 2025-11-20 19:13:22 [main] INFO  ExtentreportManager - flushing extent report
+2025-11-24 10:17:29 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-24 10:17:37 [main] INFO  BaseTest - chrome driver instance created
+2025-11-24 10:17:37 [main] INFO  BaseTest - window maximized
+2025-11-24 10:17:38 [main] INFO  BaseTest - opens the App URL
+2025-11-24 10:17:52 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-24 10:26:29 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-24 10:26:32 [main] INFO  BaseTest - chrome driver instance created
+2025-11-24 10:26:33 [main] INFO  BaseTest - window maximized
+2025-11-24 10:26:33 [main] INFO  BaseTest - opens the App URL
+2025-11-24 10:26:57 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-24 10:27:19 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-24 10:27:21 [main] INFO  BaseTest - chrome driver instance created
+2025-11-24 10:27:21 [main] INFO  BaseTest - window maximized
+2025-11-24 10:27:22 [main] INFO  BaseTest - opens the App URL
+2025-11-24 10:27:52 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-24 10:31:44 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-24 10:31:48 [main] INFO  BaseTest - chrome driver instance created
+2025-11-24 10:31:48 [main] INFO  BaseTest - window maximized
+2025-11-24 10:31:49 [main] INFO  BaseTest - opens the App URL
+2025-11-24 10:32:17 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-24 10:33:55 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-24 10:33:59 [main] INFO  BaseTest - chrome driver instance created
+2025-11-24 10:33:59 [main] INFO  BaseTest - window maximized
+2025-11-24 10:34:01 [main] INFO  BaseTest - opens the App URL
+2025-11-24 10:34:24 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-24 10:37:42 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-24 10:37:47 [main] INFO  BaseTest - chrome driver instance created
+2025-11-24 10:37:47 [main] INFO  BaseTest - window maximized
+2025-11-24 10:37:49 [main] INFO  BaseTest - opens the App URL
+2025-11-24 10:38:25 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-24 10:39:32 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-24 10:39:36 [main] INFO  BaseTest - chrome driver instance created
+2025-11-24 10:39:36 [main] INFO  BaseTest - window maximized
+2025-11-24 10:39:38 [main] INFO  BaseTest - opens the App URL
+2025-11-24 10:40:17 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-24 10:43:18 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-24 10:43:21 [main] INFO  BaseTest - chrome driver instance created
+2025-11-24 10:43:22 [main] INFO  BaseTest - window maximized
+2025-11-24 10:43:23 [main] INFO  BaseTest - opens the App URL
+2025-11-24 10:43:35 [main] INFO  BaseTest - webdriver closed successfully
+2025-11-24 10:43:59 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-11-24 10:44:03 [main] INFO  BaseTest - chrome driver instance created
+2025-11-24 10:44:03 [main] INFO  BaseTest - window maximized
+2025-11-24 10:44:04 [main] INFO  BaseTest - opens the App URL
+2025-11-24 10:44:10 [main] INFO  BasePage - applied the border with colour- red to elementBy.id: LastName
+2025-11-24 10:44:24 [main] INFO  BaseTest - webdriver closed successfully
+2025-12-04 11:31:57 [main] INFO  BaseTest - conig.properties file loadded successfully
+2025-12-04 11:32:08 [main] INFO  BaseTest - chrome driver instance created
+2025-12-04 11:32:08 [main] INFO  BaseTest - window maximized
+2025-12-04 11:32:12 [main] INFO  BaseTest - opens the App URL
+2025-12-04 11:32:12 [main] INFO  RegistrationTest - clicked on gender button
+2025-12-04 11:32:13 [main] INFO  RegistrationTest - entered first name
+2025-12-04 11:32:13 [main] INFO  BasePage - applied the border with colour- red to elementBy.id: LastName
+2025-12-04 11:32:13 [main] INFO  RegistrationTest - entered lastname
+2025-12-04 11:32:13 [main] INFO  RegistrationTest - entered email
+2025-12-04 11:32:14 [main] INFO  RegistrationTest - Entered company name
+2025-12-04 11:32:14 [main] INFO  RegistrationTest - entered password
+2025-12-04 11:32:14 [main] INFO  RegistrationTest - entered conform password
+2025-12-04 11:32:18 [main] INFO  RegistrationTest - clicked on signup button
+2025-12-04 11:32:30 [main] INFO  BaseTest - webdriver closed successfully

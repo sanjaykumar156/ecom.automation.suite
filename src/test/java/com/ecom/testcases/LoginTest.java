@@ -18,10 +18,22 @@ public class LoginTest extends BaseTest{
 		
 		LoginPage login = new LoginPage();
 		login.loginbutton();
+		logger.info("clicked on login button");
 		login.emailtext(ConfigReader.getproperty("email"));
+		logger.info("email entrered successfully");
 		login.passwordtext(ConfigReader.getproperty("password"));
+		logger.info("password entered successfully");
 		login.signinbutton();
-		assertTrue(login.homepagevalidation());
+		logger.info("clicked on sigin button");
+		try {
+		    assertTrue(login.homepagevalidation());
+		    logger.info("Homepage validation successful");
+		} catch (AssertionError e) {
+		    logger.error("Homepage validation FAILED!");
+		    logger.error("Reason: " + e.getMessage());
+		    throw e;
+		}
+
 		
 	}
 

@@ -30,7 +30,7 @@ pipeline {
                     reportDir: 'Test-Reports',
                     reportFiles: 'ExtentReport.html',
                     reportName: 'Extent HTML Report',
-                     keepAll: true
+                    keepAll: true
                 ])
             }
         }
@@ -38,7 +38,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: '**/src/main/java/utilities/ExtentReportManager/*.html', fingerprint: true
+            archiveArtifacts artifacts: 'Test-Reports/ExtentReport.html', fingerprint: true
             junit 'target/surefire-reports/*.xml'
         }
 
@@ -47,26 +47,26 @@ pipeline {
                 to: 'sanjaytanguturi37@gmail.com',
                 subject: "Build Success: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
-                <html>
-                <body>
+                <html><body>
                 <p>Hello Team,</p>
-                <p>The latest Jenkins build has completed successfully.</p>
+                <p>The Jenkins build has completed <b style='color:green;'>SUCCESSFULLY ✅</b>.</p>
 
                 <p><b>Project Name:</b> ${env.JOB_NAME}</p>
                 <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
-                <p><b>Build Status:</b> <span style='color: green;'><b>SUCCESS ✅</b></span></p>
-                <p><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-
-                <p><b>Last Commit:</b></p>
-                <p>${env.GIT_COMMIT}</p>
                 <p><b>Branch:</b> ${env.GIT_BRANCH}</p>
+                <p><b>Commit:</b> ${env.GIT_COMMIT}</p>
 
-                <p><b>Extent Report:</b> <a href="${env.BUILD_URL}HTML_20Extent_20Report/">
-                Click Here</a></p>
+                <p><b>Build URL:</b> 
+                    <a href="${env.BUILD_URL}">${env.BUILD_URL}</a>
+                </p>
 
-                <p>Best Regards,<br/>Automation Team</p>
-                </body>
-                </html>
+                <p><b>Extent Report:</b> 
+                    <a href="${env.BUILD_URL}Extent_20HTML_20Report/">
+                    Click Here</a>
+                </p>
+
+                <p>Regards,<br/>Automation Team</p>
+                </body></html>
                 """,
                 mimeType: 'text/html',
                 attachLog: true
@@ -78,28 +78,28 @@ pipeline {
                 to: 'sanjaytanguturi37@gmail.com',
                 subject: "Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
-                <html>
-                <body>
+                <html><body>
                 <p>Hello Team,</p>
-                <p>The latest Jenkins build has <b style='color: red;'>FAILED ❌</b>.</p>
+                <p>The Jenkins build has <b style='color:red;'>FAILED ❌</b>.</p>
 
                 <p><b>Project Name:</b> ${env.JOB_NAME}</p>
                 <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
-                <p><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-
-                <p><b>Last Commit:</b></p>
-                <p>${env.GIT_COMMIT}</p>
                 <p><b>Branch:</b> ${env.GIT_BRANCH}</p>
+                <p><b>Commit:</b> ${env.GIT_COMMIT}</p>
 
-                <p>Please check the logs and take necessary actions.</p>
-                
-                <p><b>Extent Report (if available):</b> 
-				<a href="${env.BUILD_URL}HTML_20Extent_20Report/">
-				Click Here</a></p>
+                <p><b>Build URL:</b> 
+                    <a href="${env.BUILD_URL}">${env.BUILD_URL}</a>
+                </p>
+
+                <p><b>Extent Report:</b> 
+                    <a href="${env.BUILD_URL}Extent_20HTML_20Report/">
+                    Click Here</a>
+                </p>
+
+                <p>Please review logs and take necessary action.</p>
 
                 <p>Regards,<br/>Automation Team</p>
-                </body>
-                </html>
+                </body></html>
                 """,
                 mimeType: 'text/html',
                 attachLog: true
