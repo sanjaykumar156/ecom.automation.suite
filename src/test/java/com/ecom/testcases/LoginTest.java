@@ -13,7 +13,7 @@ import utilities.ConfigReader;
 public class LoginTest extends BaseTest{
 	
 	
-	@Test(groups= {"smoke"})
+	@Test(groups= {"smoke"},expectedExceptions=AssertionError.class)
 	public void logintest() {
 		
 		LoginPage login = new LoginPage();
@@ -25,16 +25,13 @@ public class LoginTest extends BaseTest{
 		logger.info("password entered successfully");
 		login.signinbutton();
 		logger.info("clicked on sigin button");
-		try {
-		    assertTrue(login.homepagevalidation());
-		    logger.info("Homepage validation successful");
-		} catch (AssertionError e) {
-		    logger.error("Homepage validation FAILED!");
-		    logger.error("Reason: " + e.getMessage());
-		    throw e;
+		assertTrue(login.homepagevalidation());
+		logger.info("Homepage validation successful");
+		logger.error("Homepage validation FAILED!");
+		
 		}
 
 		
 	}
 
-}
+

@@ -57,7 +57,7 @@ public class ExtentreportManager extends ScreenshotsUtils implements ITestListen
 	
 	public void onTestFailure(ITestResult result) {
 		test = extent.createTest(result.getName());
-		test.log(Status.FAIL, "testcase failed" + result.getName());
+		test.log(Status.FAIL, result.getThrowable());
 		String screenshotPath = screenshotmanager(result.getName());
 		if (screenshotPath != null) {
 			try {

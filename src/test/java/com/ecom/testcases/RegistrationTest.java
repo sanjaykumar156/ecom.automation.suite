@@ -3,8 +3,6 @@ package com.ecom.testcases;
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.Test;
-
-import com.ecom.baseclass.BasePage;
 import com.ecom.baseclass.BaseTest;
 import com.ecom.pages.RegistrationPage;
 
@@ -17,7 +15,7 @@ public class RegistrationTest extends BaseTest{
 		
 		RegistrationPage registration= new RegistrationPage();
 		registration.genderbutton();
-		logger.info("clicked on gender button");;
+		logger.info("clicked on gender button");
 		registration.firstname();
 		logger.info("entered first name");
 		registration.lastname();
