@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+	<listeners>
+	<listener class-name="utilities.ExtentreportManager" />
+	 </listeners>
+	<test name="SmokeTest">
+	<groups>
+	<run>
+		<include name ="smoke"/>
+	</run>
+	</groups>
+		<classes>
+			<class name="com.ecom.testcases.RegistrationTest" />
+		</classes>
+	</test> 
+</suite>

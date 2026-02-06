@@ -167,3 +167,13 @@
 2025-12-31 06:42:29 [main] INFO  BaseTest - chrome driver instance created
 2025-12-31 06:42:29 [main] INFO  BaseTest - window maximized
 2025-12-31 06:42:31 [main] INFO  BaseTest - opens the App URL
+2026-01-08 10:16:07 [main] INFO  BaseTest - conig.properties file loadded successfully
+2026-01-08 10:16:50 [main] INFO  BaseTest - chrome driver instance created
+2026-01-08 10:16:50 [main] INFO  BaseTest - window maximized
+2026-01-08 10:16:51 [main] INFO  BaseTest - opens the App URL
+2026-01-08 10:17:01 [main] INFO  BaseTest - webdriver closed successfully
+2026-01-11 17:00:10 [main] INFO  BaseTest - conig.properties file loadded successfully
+2026-01-11 17:00:13 [main] INFO  BaseTest - chrome driver instance created
+2026-01-11 17:00:13 [main] INFO  BaseTest - window maximized
+2026-01-11 17:00:14 [main] INFO  BaseTest - opens the App URL
+2026-01-11 17:00:24 [main] INFO  BaseTest - webdriver closed successfully

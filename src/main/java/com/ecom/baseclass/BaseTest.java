@@ -26,10 +26,7 @@ public class BaseTest {
 			 if(browser.equals("chrome")) {
 				 ChromeOptions options= new ChromeOptions();	
 				 options.addArguments("--headless=new");
-				 options.addArguments("--disable-gpu");
 				 options.addArguments("--disable-notifications");
-				 options.addArguments("--no-sandbox");
-				 options.addArguments("--disable-dev-shm-usage");
 				 driver.set(new ChromeDriver(options));
 				 logger.info(browser+" driver instance created");
 			 }else if(browser.equals("edge")) {

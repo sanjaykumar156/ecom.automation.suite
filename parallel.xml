@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite">
+<suite name="Suite" parallel="classes" thread-count="2">
 	<listeners>
 		<listener class-name="utilities.ExtentreportManager" />
 	</listeners>
-	<test thread-count="3" name="parallelTest" parallel="classes">
+	<test name="parallelTest">
 		<classes>
 			<class name="com.ecom.testcases.RegistrationTest" />
-			<class name="com.ecom.testcases.LoginTest" />
 		</classes>
 	</test> 
 </suite>

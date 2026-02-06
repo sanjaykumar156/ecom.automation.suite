@@ -2,25 +2,27 @@ pipeline {
     agent any
 
     tools {
+        jdk 'JDK11'
         maven 'mymaven'
     }
 
     stages {
+
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/sanjaykumar156/ecom.automation.suite'
+                checkout scm
             }
         }
 
         stage('Build') {
             steps {
-                bat 'mvn clean install -DskipTests'
+                sh 'mvn clean install -DskipTests'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
 
@@ -53,17 +55,12 @@ pipeline {
 
                 <p><b>Project Name:</b> ${env.JOB_NAME}</p>
                 <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
-                <p><b>Branch:</b> ${env.GIT_BRANCH}</p>
-                <p><b>Commit:</b> ${env.GIT_COMMIT}</p>
 
                 <p><b>Build URL:</b> 
                     <a href="${env.BUILD_URL}">${env.BUILD_URL}</a>
                 </p>
 
-                <p><b>Extent Report:</b> 
-                    <a href="${env.BUILD_URL}Extent_20HTML_20Report/">
-                    Click Here</a>
-                </p>
+                <p>Please check the Extent Report in Jenkins.</p>
 
                 <p>Regards,<br/>Automation Team</p>
                 </body></html>
@@ -84,19 +81,12 @@ pipeline {
 
                 <p><b>Project Name:</b> ${env.JOB_NAME}</p>
                 <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
-                <p><b>Branch:</b> ${env.GIT_BRANCH}</p>
-                <p><b>Commit:</b> ${env.GIT_COMMIT}</p>
 
                 <p><b>Build URL:</b> 
                     <a href="${env.BUILD_URL}">${env.BUILD_URL}</a>
                 </p>
 
-                <p><b>Extent Report:</b> 
-                    <a href="${env.BUILD_URL}Extent_20HTML_20Report/">
-                    Click Here</a>
-                </p>
-
-                <p>Please review logs and take necessary action.</p>
+                <p>Please review logs and reports.</p>
 
                 <p>Regards,<br/>Automation Team</p>
                 </body></html>

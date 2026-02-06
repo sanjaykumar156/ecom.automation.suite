@@ -57,8 +57,10 @@ public class DataDriven {
 				data[i-1][j]=celltype(row.getCell(j));
 			}
 		}
-		workbook.close();
-		file.close();
+			workbook.close();
+			file.close();
+		
+		
 		return data;
 		}
 		catch(Exception e) {
