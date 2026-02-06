@@ -10,7 +10,7 @@
 	</run>
 	</groups>
 		<classes>
-			<class name="com.ecom.testcases.RegistrationTest" />
+			<class name="com.ecom.testcases.LoginTest" />
 		</classes>
 	</test> 
 </suite>
